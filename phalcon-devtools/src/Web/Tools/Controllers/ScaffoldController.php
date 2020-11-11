@@ -93,6 +93,10 @@ class ScaffoldController extends Base
                 "Please add to <code>application</code> section <code>controllersDir</code> param with real path."
             );
         }
+        # 命名空间
+        $namespace = $this->di->get('config')->application->namespaceModel;
+
+        $this->tag->setDefault('modelsNamespace', $namespace);
 
         $this->tag->setDefault('basePath', $basePath);
         $this->tag->setDefault('controllersDir', $controllersDir);

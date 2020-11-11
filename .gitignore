@@ -1,0 +1,8 @@
+modules/.phalcon/
+modules/cache/
+modules/public/js/webtools.js
+modules/public/css/webtools.css
+modules/app/common/models/
+modules/app/migrations/
+modules/app/config/config_local.php
+modules/app/config/config_test.php

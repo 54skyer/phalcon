@@ -257,7 +257,10 @@ class ModelsController extends Base
             $tables = [];
             $this->flashSession->error($PDOException->getMessage());
         }
+        # 命名空间
+        $namespace = $this->di->get('config')->application->namespaceModel;
 
+        $this->tag->setDefault('namespace', $namespace);
         $this->tag->setDefault('basePath', $basePath);
         $this->tag->setDefault('schema', $this->dbUtils->resolveDbSchema());
         $this->tag->setDefault('modelsDir', $modelsDir);

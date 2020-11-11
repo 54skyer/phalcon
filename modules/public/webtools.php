@@ -1,5 +1,5 @@
 <?php
-
+header("Content-type: text/html; charset=gbk");
 /**
  * This file is part of the Phalcon Developer Tools.
  *

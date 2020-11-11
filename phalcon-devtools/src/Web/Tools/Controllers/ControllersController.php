@@ -213,6 +213,11 @@ class ControllersController extends Base
         }
 
         $controllersDir = $this->registry->offsetGet('directories')->controllersDir;
+        # 命名空间
+        $namespace = $this->di->get('config')->application->namespaceController;
+        
+        $this->tag->setDefault('namespace', $namespace);
+        
         $basePath = $this->registry->offsetGet('directories')->basePath;
         $controllerName = $this->request->getPost('name', 'string', 'New');
 
@@ -222,8 +227,9 @@ class ControllersController extends Base
                 "Please add to <code>application</code> section <code>controllersDir</code> param with real path."
             );
         }
-
+        
         $this->tag->setDefault('name', $controllerName);
+        $this->tag->setDefault('namespace', $namespace);
         $this->tag->setDefault('basePath', $basePath);
         $this->tag->setDefault('baseClass', '\\' . Controller::class);
         $this->tag->setDefault('controllersDir', $controllersDir);

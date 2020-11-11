@@ -8,8 +8,8 @@ $loader = new Loader();
  * Register Namespaces
  */
 $loader->registerNamespaces([
-    'Modules\Models' => APP_PATH . '/common/models/',
-    'Modules'        => APP_PATH . '/common/library/',
+    'Modules\Common\Models' => APP_PATH . '/common/models/',
+    'Modules\Common\Library' => APP_PATH . '/common/library/',
 ]);
 
 /**
