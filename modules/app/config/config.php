@@ -8,7 +8,7 @@ defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 
 $appEnvConfigFile = APP_PATH . '/config/config_'.APP_ENV.'.php';
 if(defined('PTOOLSPATH')){
-    $appEnvConfigFile = APP_PATH . '/config/config_webtool.php';
+    $appEnvConfigFile = APP_PATH . '/config/config_webtools.php';
 }
 if(!is_file($appEnvConfigFile)){
     die('application environment config file not found: '.$appEnvConfigFile);
