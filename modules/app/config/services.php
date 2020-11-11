@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 use Phalcon\Mvc\Model\Metadata\Memory as MetaDataAdapter;
 use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
-use Phalcon\Config\Adapter\Ini;
+
 
 /**
  * Shared configuration service
  */
 $di->setShared('config', function () {
-    return new Ini(APP_PATH  . "/config/config.ini");
+    return include APP_PATH . "/config/config.php";
 });
 
 /**
